@@ -1,0 +1,88 @@
+# Example RFP YAML file for use with read_yamls.py
+#
+# Recognized top-level structure:
+# rfp:
+#   rfp_no:            # RFP identification number (integer or string)
+#   lead_org:          # Vendor or organization name (string)
+#   t1:                # Tier 1 configuration (dict or list of dicts)
+#   t2:                # Tier 2 configuration (dict or list of dicts)
+#   hn:                # high-speed network (dict)
+#   cn:                # commodity network (dict)
+#   hs:                # high-speed storage (dict)
+#   cs:                # commodity storage (dict)
+#   sn:                # service node (dict)
+#   sstack:            # storage stack (string)
+#   # total_price:     # (float, not required in template)
+#
+# Each node (t1, t2, hn, cn, hs, cs, sn) typically contains:
+#   item_label:        # Name or label for the item
+#   item_count:        # Count or quantity (integer, string, or PiB for storage)
+#   # Additional fields may be present depending on node type, e.g.:
+#   # chassis, gpu_type, gpu_count, ram_tib, cooling, cpu, cpu_ghz, cpu_count, cpu_threads, ndr400_ports, nvme_tb, nvme_count, eth_200, eth800_ports, eth25_ports, etc.
+#
+# Fields not present in the template may be added as needed for your system.
+rfp:
+  rfp_no: XX
+  lead_org: EXAMPLE_VENDOR
+  t1:
+    item_label: example_tier1
+    item_count: 0
+    chassis: example_chassis
+    gpu_type: example_gpu
+    gpu_count: 0
+    ram_tib: 0
+    cooling: example_cooling
+    cpu: example_cpu
+    cpu_ghz: 0.0
+    cpu_count: 0
+    cpu_threads: 0
+    ndr400_ports: 0
+    nvme_tb: 0.0
+    nvme_count: 0
+    eth_200: 0
+  t2:
+    item_label: example_tier2
+    item_count: 0
+    chassis: example_chassis2
+    gpu_type: example_gpu2
+    gpu_count: 0
+    ram_tib: 0
+    cooling: example_cooling2
+    cpu: example_cpu2
+    cpu_ghz: 0.0
+    cpu_count: 0
+    cpu_threads: 0
+    ndr400_ports: 0
+    nvme_tb: 0.0
+    nvme_count: 0
+    eth_200: 0
+  hn:  # high-speed network
+    item_label: example_highspeed_network
+    item_count: 0
+    ndr400_ports: 0
+  cn:  # commodity network
+    item_label: example_commodity_network
+    item_count: 0
+    eth800_ports: 0
+  hs:  # high-speed storage
+    item_label: example_highspeed
+    item_count: 0
+    usable_tb: 0
+    raw_rb: 0
+    read_tb: 0
+    assumed_data_reduction: 0.0
+  cs:  # commodity storage
+    item_label: example_capacity
+    item_count: 0
+  sn:  # service node
+    item_label: example_storagenet
+    item_count: 0
+    cpu: example_cpu_sn
+    ram_tib: 0
+    cpu_ghz: 0.0
+    cpu_threads: 0
+    eth25_ports: 0
+    ndr_400: 0
+    nvme_tib: 0.0
+    nvme_count: 0
+  sstack: example_stack 
