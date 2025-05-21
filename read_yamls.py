@@ -5,7 +5,7 @@ import argparse
 import math
 
 def read_yaml_files(): 
-    yaml_files = ['lenovo.yaml', 'cambridge.yaml', 'ibm.yaml', 'markiii.yaml' , 'penguin.yaml']
+    yaml_files = ['1.yaml', '2.yaml', '3.yaml', '4.yaml' , '5.yaml']
     yaml_dicts = {}
     
     for file_name in yaml_files:
