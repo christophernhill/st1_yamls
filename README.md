@@ -7,15 +7,6 @@ This tool processes YAML files containing RFP (Request for Proposal) system spec
 - `read_yamls.py`: Main Python script that processes YAML files and generates CSV output
 - `run_tgp_range.sh`: Bash script to run the analysis with different TGP values
 
-## Input Files
-
-The program expects the following YAML files in the same directory:
-- lenovo.yaml
-- cambridge.yaml
-- ibm.yaml
-- markiii.yaml
-- penguin.yaml
-
 ## Output Format
 
 The program generates CSV files with the following columns:
